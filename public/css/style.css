@@ -27,6 +27,15 @@ body {
 
 h1 {
     font-size: 4rem;
+    text-decoration: none;
+    color: white;
+
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+
 }
 
 button {
@@ -52,3 +61,4 @@ button:hover{
 p {
     font-weight: bold;
 }
+

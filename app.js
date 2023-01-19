@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 
 app.post("/convert-mp3", async (req, res) => {
     const userInput = req.body.videoId;
+    videoID = (userInput.slice(userInput.indexOf("=") + 1, userInput.indexOf("&")));
 
     if (userInput == undefined ||
         userInput == "" ||
@@ -34,7 +35,7 @@ app.post("/convert-mp3", async (req, res) => {
     }
 
     else { 
-        const fetchAPI = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${userInput}`, {
+        const fetchAPI = await fetch(`https://youtube-mp36.p.rapidapi.com/dl?id=${videoID}`, {
           "method": "GET",
           "headers": {
             "x-rapidapi-key": process.env.API_KEY,
