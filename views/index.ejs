@@ -10,19 +10,21 @@
 </head>
 <body>
     <div class="top-container">
-        <form action="convert-mp3" method="POST" id = "form">
+        <form action="/convert-mp3" method="POST" id = "form">
             <h1><i class="fa-brands fa-youtube"></i> Youtube to Mp3 Converter</h1>
             <div>
-                <input type="text" name="youtube-link" placeholder="paste link here"><button id="convert-btn">Convert</button>
+                <input type="text" name="videoId" placeholder="paste link here"><button id="convert-btn">Convert</button>
             </div>
         </form>
     </div>
 
     <div class="bottom-container">
         <% if(typeof success != "undefined" && success) { %>
-            <div class="sucess">
+            <div class="success">
                 <p><%= song_title %></p>
                 <a href="<%=song_link %>"><button id="download-btn">Download</button></a>
+                <a href="/"><button id="convert-again">Convert Again</button></a>
+
             </div>
         <% } else if(typeof success != "undefined" && !success) { %>
             <div class="errors">
