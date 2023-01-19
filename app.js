@@ -17,9 +17,16 @@ app.use(express.urlencoded({
 }))
 
 app.use(express.json());
+
+
 app.get("/", (req, res) => {
-    res.send("HELLO WORLD");
+    res.render("index.ejs")
 })
+
+app.post("/", (req, res) => {
+    
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
