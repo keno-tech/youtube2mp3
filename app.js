@@ -31,7 +31,7 @@ app.post("/convert-mp3", async (req, res) => {
         userInput == "" ||
         userInput == null)  
     {
-        return res.render("index", {success : false, error_message : "Please enter a video link"})
+        return res.render("index", {success : false, message : "Please enter a video link"})
     }
 
     else { 
